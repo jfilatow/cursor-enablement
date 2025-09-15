@@ -31,7 +31,7 @@ Enable Vibe mode for this session. Follow `.cursor/rules/VibeMode.mdc` and `.cur
 ### Quick start
 1. Sign in to Cursor and open this folder:
 2. Go to [01-basics/README.md](01-basics/README.md). This is the step‑by‑step guide.
-3. Outcome of `01-basics`: your `progress.md` plus a simple dashboard you build by prompting Cursor.
+3. Outcome of `01-basics`: your `progress.json` plus a simple dashboard you build by prompting Cursor.
 4. Install a Markdown/HTML preview extension (details in [01-basics/README.md](01-basics/README.md)).
 
 Tip: terminal access on macOS and Windows

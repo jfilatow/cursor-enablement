@@ -12,6 +12,6 @@ Write the README text using headings and bullets. Keep language simple and concr
 
 ### 3) Action items
 ```text
-Extract 3 action items from the README and format them as a checklist for progress.md.
+Extract 3 action items from the README and append them as new exercises in progress.json via ProgressTracker. Show the JSON diff only.
 ```
 

@@ -5,7 +5,7 @@ Reproduce, propose a fix, and validate.
 Objectives
 - Capture a minimal repro in plain text or code.
 - Ask the agent for a fix and side effects to watch for.
-- Validate with a quick test or manual check.
+- Validate with a quick test or manual check and record verification in `progress.json` via ProgressTracker.
 
 Next: `../08-mcp-and-context/README.md`.
 

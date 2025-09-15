@@ -8,7 +8,7 @@ Build reliable prompts and tighten follow‑ups.
 - Iterate with short follow‑ups to reach the target.
 
 ### Prerequisites
-- Completed `01-basics` and have a working `progress.md`.
+- Completed `01-basics` and have a working `progress.json`.
 
 ### Exercises
 1. Draft 3 prompts you’ll reuse; store them in `prompts.md`.

@@ -7,7 +7,7 @@ Add or verify the Atlassian MCP server per the README. Then confirm connectivity
 
 ### 2) Use retrieved data
 ```text
-Pull my Jira projects (name and key) and suggest one training task to add to progress.md.
+Pull my Jira projects (name and key) and suggest one training task to add to progress.json via ProgressTracker.
 ```
 
 ### 3) Context infusion

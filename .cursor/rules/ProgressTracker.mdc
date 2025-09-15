@@ -1,0 +1,51 @@
+---
+alwaysApply: true
+---
+# Progress tracker
+
+Purpose
+- Maintain a single JSON source of truth for training progress: `progress.json` at the repo root.
+
+When to update
+- On any change you propose or make that indicates learner progress, including:
+  - Creating, deleting, or renaming files
+  - Completing an exercise step in a section
+  - Running a verification or test step
+- If `progress.json` does not exist, create it using the schema below.
+
+How to update
+- Append a new event to `changelog` with ISO timestamp, section, exercise id, action, and affected paths.
+- Update or insert the matching exercise entry under `sections[].exercises[]` with `status` and any `artifacts`.
+- Recompute `summary` counts.
+- Keep JSON compact and stable; preserve order of top‑level keys: version, learner, summary, sections, changelog, lastUpdated.
+
+Schema (example)
+```json
+{
+  "version": 1,
+  "learner": { "name": "<your name>", "startedAt": "<iso>" },
+  "summary": { "total": 0, "completed": 0, "inProgress": 0, "pending": 0 },
+  "sections": [
+    {
+      "id": "01-basics",
+      "title": "Cursor Basics",
+      "exercises": [
+        { "id": "progress-json", "title": "Create progress.json", "status": "completed", "artifacts": ["progress.json"], "promptsUsed": ["create-schema"] }
+      ]
+    }
+  ],
+  "changelog": [
+    { "ts": "<iso>", "section": "01-basics", "exercise": "progress-json", "action": "file-created", "paths": ["progress.json"] }
+  ],
+  "lastUpdated": "<iso>"
+}
+```
+
+Conventions
+- `status`: one of `pending`, `in_progress`, `completed`.
+- `action`: `file-created`, `file-deleted`, `file-renamed`, `exercise-started`, `exercise-completed`, `verified`.
+- Use relative paths in `paths`.
+
+Notes
+- Do not generate the visualization code unless asked; the learner will prompt to build the dashboard in their style.
+

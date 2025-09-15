@@ -5,7 +5,7 @@ Learn Cursor’s core flow with hands‑on prompts. You’ll generate all artifa
 ### Objectives
 - Install and tour Cursor; learn where to find things.
 - Use attachments, docs, and rules to guide the agent.
-- Generate your own `progress.md` and, later, your own simple visual dashboard by prompting Cursor.
+- Generate your own `progress.json` and, later, your own simple visual dashboard by prompting Cursor.
 
 ### Prerequisites
 - Cursor Business account. No Git needed; download or use this repo directly.
@@ -15,14 +15,14 @@ Learn Cursor’s core flow with hands‑on prompts. You’ll generate all artifa
   - Also recommended (optional): GitLens, Error Lens, Path Intellisense, MarkdownLint.
 
 ### What you’ll build
-- A standardized `progress.md` checklist created via a structured prompt.
-- A minimal dashboard to visualize your progress (you will plan and generate it via prompts here).
+- A standardized `progress.json` file created via a structured prompt.
+- A minimal dashboard to visualize your JSON progress (you will plan and generate it via prompts here).
 
 ### Agenda (suggested)
 - 0–10 min: Setup, open repo, orientation.
 - 10–20 min: UI tour; chat, composer, tabs, settings.
 - 20–35 min: Attach files, use rules; add docs context.
-- 35–55 min: Create `progress.md` from a structured prompt. Optionally start scaffolding a simple viewer you will complete in a later section.
+- 35–55 min: Create `progress.json` from a structured prompt. Optionally start scaffolding a simple viewer you will complete in a later section.
 - 55–60 min: Recap and next steps.
 
 ---
@@ -99,7 +99,7 @@ Rules live in `.cursor/rules/`.
 1. Open [`.cursor/rules/Enablement.mdc`](../.cursor/rules/Enablement.mdc) and skim it.
 2. In chat, refer to rules explicitly:
 ```text
-Follow the Enablement and Writing rules when responding. Create a short checklist for my progress.md.
+Follow the Enablement and Writing rules when responding. Use ProgressTracker to keep `progress.json` updated. Create a short checklist of what we’ll do next.
 ```
 3. Optional modes:
    - Open [`.cursor/rules/LearningMode.mdc`](../.cursor/rules/LearningMode.mdc) for step‑by‑step explanations.
@@ -141,45 +141,44 @@ Verify it works
 Using the Atlassian OAuth MCP, list my Jira projects and suggest a small task I could track in progress.md.
 ```
 
-### Step 6 — Create your training checklist
-Use this structured prompt to generate your `progress.md` from scratch. For more prompts, see [prompts.md](prompts.md):
+### Step 6 — Create your training JSON
+Use this structured prompt to generate your `progress.json` from scratch. For more prompts, see [prompts.md](prompts.md):
 ```text
-You are my enablement copilot. Follow `.cursor/rules/Enablement.mdc` and `.cursor/rules/Writing.mdc`.
+You are my enablement copilot. Follow `.cursor/rules/Enablement.mdc`, `.cursor/rules/Writing.mdc`, and `.cursor/rules/ProgressTracker.mdc`.
 
-Goal: Create a personal training checklist for "Cursor Basics" as a GitHub‑style markdown file named `progress.md`.
+Goal: Create a personal training tracker as a JSON file named `progress.json` following the schema in ProgressTracker. Initialize my learner name and startedAt.
 
 Requirements:
-- Group items under `##` headings that mirror this section’s agenda: Setup & UI, Attachments & Docs, Rules, Progress Checklist.
-- 10–14 tasks total; each task uses `- [ ]` or `- [x]`.
-- Tasks must be specific and testable, e.g., "Attach the top‑level README.md and ask for a 3‑sentence summary."
-- Include 2 stretch tasks at the end under `## Stretch`.
-- Put a short header at the top with: title, date placeholder, and my name placeholder.
+- Create `sections` for: Setup & UI, Attachments & Docs, Rules, Dashboard, Stretch.
+- Seed at least 8 exercises with ids, titles, and `status: "pending"`.
+- Add `changelog` with one `file-created` event for `progress.json`.
+- Compute `summary` counts.
 
 Output: only the markdown content, no explanations.
 ```
-After Cursor generates the content, create a new file `progress.md` in this folder and paste it in.
+After Cursor generates the content, create a new file `progress.json` in this folder and paste it in.
 
-Optional: validate checkboxes render correctly in preview
+Optional: validate JSON and show counts
 ```text
-Open my new progress.md in a preview. Verify checkboxes display correctly and headings are structured.
+Validate that `progress.json` matches the schema in ProgressTracker and summarize total vs. completed.
 ```
 
 If you need a terminal command to create the file directly:
 - macOS:
 ```bash
-printf "# Cursor Basics Progress\n\n- [ ] Example task" > progress.md
+printf '{"version":1,"learner":{"name":"<name>","startedAt":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"},"summary":{"total":0,"completed":0,"inProgress":0,"pending":0},"sections":[],"changelog":[],"lastUpdated":"'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'"}' > progress.json
 ```
 - Windows:
 ```bat
-echo # Cursor Basics Progress>progress.md & echo.>>progress.md & echo - [ ] Example task>>progress.md
+echo {"version":1,"learner":{"name":"<name>","startedAt":"2025-01-01T00:00:00Z"},"summary":{"total":0,"completed":0,"inProgress":0,"pending":0},"sections":[],"changelog":[],"lastUpdated":"2025-01-01T00:00:00Z"} > progress.json
 ```
 
 ### Step 7 — Build your simple dashboard (hands‑on via prompts)
-You’ll generate a tiny viewer that reads your `progress.md` and shows completion. Keep it static and lightweight.
+You’ll generate a tiny viewer that reads your `progress.json` and shows completion. Keep it static and lightweight.
 
 1) Plan (no code yet)
 ```text
-Plan a minimal, static viewer for `progress.md` that works locally with no heavy tooling. Include the file list, each file’s purpose, and acceptance criteria. Add a landscape print requirement.
+Plan a minimal, static viewer for `progress.json` that works locally with no heavy tooling. Include the file list, each file’s purpose, and acceptance criteria. Add a landscape print requirement.
 ```
 
 2) Generate scaffold
@@ -189,13 +188,13 @@ Create the files you proposed and include short comments in code explaining inte
 
 3) Verify and iterate
 ```text
-Given my generated files, check that the viewer loads and parses GitHub-style checkboxes. If something is missing, propose small diffs only.
+Given my generated files, check that the viewer loads and renders JSON summary and per-section progress. If something is missing, propose small diffs only.
 ```
 
 ### Step 8 — Reflection
 In chat:
 ```text
-Given my current progress.md, suggest the next best section to take and why. Keep it short.
+Given my current progress.json, suggest the next best section to take and why. Keep it short.
 ```
 
 ### Next section
@@ -206,7 +205,7 @@ Go to `../02-prompting-basics/README.md`.
 - If MCP auth fails, complete OAuth in your browser, then retry.
 
 ### Optional activities (if you have time)
-- Personalize `progress.md` with role-specific tasks.
+- Personalize `progress.json` with role-specific tasks.
 - Add a “Stretch” section with 2–3 extra tasks.
 - Draft a facilitator script outline in a new `Facilitator.md` with checkpoints every 10 minutes.
 

@@ -32,17 +32,13 @@ Enable Learning mode. Follow `.cursor/rules/LearningMode.mdc` plus the Writing r
 Open Settings → Indexing & Docs. Add documentation with URL https://docs.cursor.com and start indexing. Confirm "Allow using documentation as context" is enabled. Then summarize the 3 most relevant pages I should read for Basics.
 ```
 
-### 4) Create progress.md (standardized)
+### 4) Create progress.json (standardized)
 ```text
-You are my enablement copilot. Follow `.cursor/rules/Enablement.mdc` and `.cursor/rules/Writing.mdc`.
+You are my enablement copilot. Follow `.cursor/rules/Enablement.mdc`, `.cursor/rules/Writing.mdc`, and `.cursor/rules/ProgressTracker.mdc`.
 
-Create a new file `progress.md` for "Cursor Basics" with:
-- A title line, date placeholder, and my name placeholder.
-- 10–14 GitHub‑style checklist items grouped under `##` headings: Setup & UI, Attachments & Docs, Rules, Progress Checklist, Stretch.
-- Two items pre‑checked to demonstrate `[x]`.
-- Each task is specific and testable.
+Create a new file `progress.json` for "Cursor Basics" using the schema in ProgressTracker. Seed sections for Setup & UI, Attachments & Docs, Rules, Dashboard, Stretch with pending exercises. Add a `file-created` changelog event.
 
-Return only the markdown content.
+Return only the JSON.
 ```
 
 ### 5) Print-friendly output
@@ -75,14 +71,24 @@ Use these docs for context and cite them as sources:
 Summarize the key points relevant to the Basics session in 5 bullets.
 ```
 
-### 9) Plan a simple viewer (no solution)
+### 9) Plan a simple JSON dashboard (no solution)
 ```text
-Plan a minimal, static way to visualize my `progress.md` locally with no heavy tooling and with a "Print / Save PDF" action and landscape print CSS. Output a short plan with steps and acceptance criteria. Do not output code yet.
+Plan a minimal, static way to visualize my `progress.json` locally with no heavy tooling and with a "Print / Save PDF" action and landscape print CSS. Output a short plan with steps and acceptance criteria. Do not output code yet.
 ```
 
 ### 10) Ask for OS-specific commands
 ```text
 I’m on macOS/Windows. Provide the exact terminal/Command Prompt commands for the previous step, and include brief instructions on how to open the terminal on my OS.
+```
+
+### 11) Add a visual component (cards)
+```text
+Add a small plan to render each section as a card showing completed/pending counts from progress.json. Do not output code yet; list acceptance criteria.
+```
+
+### 12) Add a visual component (timeline)
+```text
+Plan a compact timeline that reads changelog events from progress.json and displays them with timestamps. No code yet; list acceptance criteria.
 ```
 
 
