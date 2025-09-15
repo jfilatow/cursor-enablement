@@ -51,3 +51,31 @@ Tip: terminal access on macOS and Windows
 
 Start with `01-basics`. Each section targets ~60 minutes and builds on the previous one.
 
+### Prompting basics in Cursor
+
+How to get consistent results:
+- State the goal first, then constraints and acceptance criteria.
+- Say what context to use (files, rules, docs) and how to treat it.
+- Prefer short, iterative follow‑ups over long, single prompts.
+
+Model selection
+- Where: open Settings → Models to pick defaults; or use the model picker in chat.
+- Guidance: start with a reliable general model. Switch to a larger model for complex reasoning; switch to a faster model for bulk edits after you have a spec.
+
+Attach rules and context
+- Rules live under [`.cursor/rules/`](.cursor/rules/). Reference them by name in your prompt, for example: “Follow `.cursor/rules/Writing.mdc` and `.cursor/rules/LearningMode.mdc`.”
+- Docs: Settings → Indexing & Docs → Add documentation. This repo adds `https://docs.cursor.com` for reference.
+- Files: drag files into chat or mention their relative paths.
+
+Modes you can use while prompting
+- Learning mode: [`.cursor/rules/LearningMode.mdc`](.cursor/rules/LearningMode.mdc) explains first and confirms after each step.
+- Vibe mode: [`.cursor/rules/VibeMode.mdc`](.cursor/rules/VibeMode.mdc) speeds up multi‑file building with confirmations for destructive actions.
+- Presentations: [`.cursor/rules/Presentations.mdc`](.cursor/rules/Presentations.mdc) makes outputs print‑ready.
+- Progress tracking: [`.cursor/rules/ProgressTracker.mdc`](.cursor/rules/ProgressTracker.mdc) keeps `progress.json` updated.
+
+Prompt templates you can copy
+- Orientation: “Read `README.md` and `01-basics/README.md`. In 4 bullets, say what I’ll do today and the final artifact.”
+- With rules: “Follow `.cursor/rules/Writing.mdc` and `.cursor/rules/LearningMode.mdc`. Explain before acting; confirm after.”
+- With context: “Use the attached files and `https://docs.cursor.com` as sources. Cite what you used.”
+- Acceptance criteria: “List acceptance criteria first. Then propose the smallest next step.”
+
