@@ -19,7 +19,7 @@ I attached two files. Summarize them, then propose my next action in one sentenc
 
 ### 3) Rules
 ```text
-Follow [`.cursor/rules/Enablement.mdc`](../.cursor/rules/Enablement.mdc) and [`.cursor/rules/Writing.mdc`](../.cursor/rules/Writing.mdc). Generate a concise checklist for my `progress.md`.
+Follow [`.cursor/rules/Enablement.mdc`](../.cursor/rules/Enablement.mdc) and [`.cursor/rules/Writing.mdc`](../.cursor/rules/Writing.mdc). Generate a concise checklist for my `progress.json`.
 ```
 
 ### 3.0) Turn on Learning mode (optional)
@@ -48,7 +48,7 @@ Ensure any HTML you generate includes a "Print / Save PDF" option and landscape 
 
 ### 6) MCP (Atlassian demo)
 ```text
-Using the Atlassian OAuth MCP, list my Jira projects and suggest a small task I could track in `progress.md`.
+Using the Atlassian OAuth MCP, list my Jira projects and suggest a small task I could track in `progress.json`.
 ```
 
 ### 7) Add Atlassian MCP via JSON

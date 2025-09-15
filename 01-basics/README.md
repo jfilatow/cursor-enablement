@@ -138,7 +138,7 @@ Verify it works
 - Settings → MCP & Integrations: confirm “Atlassian-MCP-Server” appears. If prompted, authorize OAuth.
 - In chat:
 ```text
-Using the Atlassian OAuth MCP, list my Jira projects and suggest a small task I could track in progress.md.
+Using the Atlassian OAuth MCP, list my Jira projects and suggest a small task I could track in progress.json.
 ```
 
 ### Step 6 — Create your training JSON

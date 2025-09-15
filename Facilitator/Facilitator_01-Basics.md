@@ -27,9 +27,9 @@ Use this to host a live session. Speak in your own words; keep it hands‑on.
 - Paste docs links for context: Quickstart, Concepts, Working with documentation.
 - In chat: ask for a 3‑sentence summary and the next action.
 
-### 35–55 min — Create `progress.md`
+### 35–55 min — Create `progress.json`
 - Paste the standardized prompt from `01-basics/README.md` → Step 6.
-- Have everyone create `progress.md` and preview it with the extension.
+- Have everyone create `progress.json` and validate JSON.
 - Optional stretch: ask the agent to propose a plan for a simple viewer, no code yet.
 
 ### 55–60 min — Recap
