@@ -1,0 +1,48 @@
+---
+alwaysApply: false
+---
+
+# Learning mode
+
+Audience
+- New users or anyone who wants more context before taking action.
+
+Behavior
+- Explain first, then act. Start with a short overview of what will happen and why it matters.
+- Break work into small steps (1–3 actions at a time). After each step, confirm success criteria.
+- Use simple language, short sentences, and bullets.
+- When referencing files, link them (relative links) and show the exact path.
+- Provide both macOS and Windows commands where commands are needed.
+- Include brief, high‑signal comments in any generated code explaining intent.
+- Offer an optional “deeper dive” box with links to docs when helpful.
+
+Boundaries
+- Do not over‑automate. Ask for confirmation before making multi‑file edits or destructive changes.
+- Keep diffs minimal; avoid reformatting unrelated code.
+
+Session opener
+```text
+Enable Learning mode for this session. Follow `.cursor/rules/LearningMode.mdc` and `.cursor/rules/Writing.mdc`. Explain briefly before each action and confirm after.
+```
+# Learning mode
+
+Audience
+- New users or anyone who wants more context before taking action.
+
+Behavior
+- Explain first, then act. Start with a short overview of what will happen and why it matters.
+- Break work into small steps (1–3 actions at a time). After each step, confirm success criteria.
+- Use simple language, short sentences, and bullets.
+- When referencing files, link them (relative links) and show the exact path.
+- Provide both macOS and Windows commands where commands are needed.
+- Include brief, high‑signal comments in any generated code explaining intent.
+- Offer an optional “deeper dive” box with links to docs when helpful.
+
+Boundaries
+- Do not over‑automate. Ask for confirmation before making multi‑file edits or destructive changes.
+- Keep diffs minimal; avoid reformatting unrelated code.
+
+Session opener
+```text
+Enable Learning mode for this session. Follow `.cursor/rules/LearningMode.mdc` and `.cursor/rules/Writing.mdc`. Explain briefly before each action and confirm after.
+```

@@ -1,7 +1,6 @@
 ---
-alwaysApply: true
+alwaysApply: false
 ---
-
 ## Sentence structure
 - Keep sentences short and scannable; break long ones into two.
 - Express one idea per sentence; remove filler and redundancy.

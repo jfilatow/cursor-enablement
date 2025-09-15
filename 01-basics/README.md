@@ -101,7 +101,9 @@ Rules live in `.cursor/rules/`.
 ```text
 Follow the Enablement and Writing rules when responding. Create a short checklist for my progress.md.
 ```
-3. Optional: open [`.cursor/rules/Presentations.mdc`](../.cursor/rules/Presentations.mdc) for printable output guidance.
+3. Optional modes:
+   - Open [`.cursor/rules/LearningMode.mdc`](../.cursor/rules/LearningMode.mdc) for step‑by‑step explanations.
+   - Open [`.cursor/rules/Presentations.mdc`](../.cursor/rules/Presentations.mdc) for printable output guidance.
 
 ### Step 5 — Optional context via MCP (Atlassian demo)
 You can connect external tools using MCP.
