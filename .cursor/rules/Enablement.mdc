@@ -1,3 +1,28 @@
+---
+alwaysApply: false
+---
+
+# Enablement rules
+
+- Prefer step-by-step instructions with copy/paste prompts.
+- Keep language simple and concrete; avoid jargon.
+- Call out objectives and expected outcomes before actions.
+- Assume no Git and no admin rights in Basics.
+- Favor local, static solutions; avoid heavy installs.
+- When presenting UIs, include printable views and a PDF option.
+- Always include short comments in code explaining intent.
+- Use concise bullets over long paragraphs.
+
+Reply formatting
+- Use headings, bullets, and short code fences where helpful.
+- Wrap filenames like `Start.md` in backticks.
+- Use descriptive links instead of bare URLs.
+
+Training flow
+- Each section is ~60 minutes and builds on the previous.
+- Basics must be accessible to non‑developers and developers alike.
+- Provide optional stretch goals without blocking core flow.
+
 # Enablement rules
 
 - Prefer step-by-step instructions with copy/paste prompts.

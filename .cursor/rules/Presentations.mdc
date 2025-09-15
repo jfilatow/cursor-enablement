@@ -1,3 +1,20 @@
+---
+alwaysApply: false
+---
+
+# Presentation outputs
+
+- Outputs must be printable and shareable as PDF in landscape.
+- Include all graphics and avoid elements that disappear when printing.
+- Provide an explicit "Print / Save PDF" action.
+- Prefer web-safe fonts and simple color palettes with strong contrast.
+- Keep margins reasonable for A4/Letter.
+
+When building HTML views, include:
+- `@page { size: landscape; }` for print.
+- A top-level button to trigger `window.print()`.
+- Fallbacks for offline or file:// contexts.
+
 # Presentation outputs
 
 - Outputs must be printable and shareable as PDF in landscape.
