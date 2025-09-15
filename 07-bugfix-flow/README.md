@@ -15,4 +15,3 @@ Next: `../08-mcp-and-context/README.md`.
 - macOS Terminal: Applications → Utilities → Terminal. Run repro scripts with `bash script.sh` if needed.
 - Windows Command Prompt: Start menu → search "Command Prompt". Run batch files with `script.bat`.
 - Windows PowerShell: Start menu → search "PowerShell". Run scripts with `powershell -ExecutionPolicy Bypass -File .\script.ps1`.
-

@@ -35,7 +35,7 @@ Learn Cursor’s core flow with hands‑on prompts. You’ll generate all artifa
    - Background Agents: enable.
    - MCP & Integrations: enable remote servers; you can add Atlassian later in Step 5.
    - Rules & Memories: ensure rules are enabled; this repo ships with `.cursor/rules/`.
-   - Indexing & Docs: enable workspace indexing and allow attaching docs.
+   - Indexing & Docs: enable indexing, click Add documentation, paste `https://docs.cursor.com`, and Index. Keep “Allow using documentation as context” enabled.
    - Notifications: enable system notifications.
 4. Install the recommended extensions from above. Ask Cursor for the exact steps if needed:
 Optional: enable a faster build session (Vibe mode)

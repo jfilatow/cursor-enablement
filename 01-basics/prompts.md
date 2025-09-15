@@ -22,6 +22,11 @@ I attached two files. Summarize them, then propose my next action in one sentenc
 Follow [`.cursor/rules/Enablement.mdc`](../.cursor/rules/Enablement.mdc) and [`.cursor/rules/Writing.mdc`](../.cursor/rules/Writing.mdc). Generate a concise checklist for my `progress.md`.
 ```
 
+### 3.1) Add and index docs.cursor.com
+```text
+Open Settings → Indexing & Docs. Add documentation with URL https://docs.cursor.com and start indexing. Confirm "Allow using documentation as context" is enabled. Then summarize the 3 most relevant pages I should read for Basics.
+```
+
 ### 4) Create progress.md (standardized)
 ```text
 You are my enablement copilot. Follow `.cursor/rules/Enablement.mdc` and `.cursor/rules/Writing.mdc`.

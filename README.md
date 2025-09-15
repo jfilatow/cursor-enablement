@@ -11,7 +11,9 @@ Purpose
   - Background Agents: turn on background agents so tasks continue while you edit.
   - MCP & Integrations: allow remote servers; add Atlassian now or later. Keep it enabled.
   - Rules & Memories: enable rules; ensure the workspace rules folder `.cursor/rules/` is active.
-  - Indexing & Docs: enable workspace indexing and allow attaching local/online docs as context.
+  - Indexing & Docs: enable indexing and add public docs for context.
+    - Add documentation → URL `https://docs.cursor.com` → Index.
+    - Keep “Allow using documentation as context” enabled.
   - Notifications: enable system notifications; optional to disable completion sounds.
   - General → Reset “Don’t Ask Again” Dialogs: click Show; during the session you can choose “Don’t ask again” when confirming large edits to keep momentum. Re‑enable prompts after the session if you prefer.
 - Optional helpers:
