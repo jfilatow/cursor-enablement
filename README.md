@@ -2,13 +2,18 @@
 
 This repo is a self‑paced, evolving Cursor training you can run any time or use in a hosted session.
 
-### Before you start — make Cursor more VS Code compatible
+### Before you start — set up Cursor for vibe coding
 - Open Settings (gear icon bottom‑left).
-- In Settings, review:
-  - Editor: enable visible minimap if you prefer; disable unusual keybindings.
+- Enable these for a faster build flow:
+  - Background Agents: turn on background agents so tasks continue while you edit.
+  - MCP & Integrations: allow remote servers; add Atlassian now or later. Keep it enabled.
+  - Rules & Memories: enable rules; ensure the workspace rules folder `.cursor/rules/` is active.
+  - Indexing & Docs: enable workspace indexing and allow attaching local/online docs as context.
+  - Notifications: enable system notifications; optional to disable completion sounds.
+  - General → Reset “Don’t Ask Again” Dialogs: click Show; during the session you can choose “Don’t ask again” when confirming large edits to keep momentum. Re‑enable prompts after the session if you prefer.
+- Optional helpers:
   - Extensions: install a Markdown/HTML preview extension; optionally GitLens, Error Lens, Path Intellisense, MarkdownLint.
-  - Rules: ensure `.cursor/rules/` are active.
-- Goal: a simple, predictable setup that mirrors a typical VS Code layout.
+  - Read `.cursor/rules/VibeMode.mdc` for the session permissions we use when building fast.
 
 ### Optional — enable Vibe mode (build‑fast permissions)
 - Open [`.cursor/rules/VibeMode.mdc`](.cursor/rules/VibeMode.mdc) and skim.
