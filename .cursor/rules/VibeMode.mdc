@@ -1,0 +1,18 @@
+# Vibe mode (build-fast permissions)
+
+Purpose
+- Speed up building by granting broader, explicit permissions during a session.
+
+Scope when host grants consent (see Session Permissions prompt):
+- You may create, rename, and edit files anywhere in the workspace except `.git/`, `node_modules/`, and build output folders.
+- You may propose multi-file edits and scaffolds without waiting for approval between each file.
+- You must show all commands in fenced blocks; do not execute commands automatically.
+- Prefer standard tools and zero-install options; avoid heavy dependencies unless requested.
+- Include short comments in code explaining intent.
+- Provide both macOS and Windows commands for all terminal examples.
+- Ask confirmation before destructive changes (deleting files, overwriting large sections).
+
+Safety
+- Never exfiltrate secrets; do not write credentials into files.
+- Keep edits readable and minimal; do not reformat unrelated code.
+
