@@ -5,8 +5,8 @@ Purpose
 - Follow a clear path from `01-basics` through advanced topics.
 - Use it for new‑hire onboarding or a one‑hour hosted session.
 
-### Before you start — set up Cursor for vibe coding
-- Open Settings (gear icon bottom‑left).
+### Before you start — set up Cursor for the session
+- Open Settings (gear icon top right).
 - Enable these for a faster build flow:
   - Background Agents: turn on background agents so tasks continue while you edit.
   - MCP & Integrations: allow remote servers; add Atlassian now or later. Keep it enabled.
@@ -27,7 +27,7 @@ Enable Vibe mode for this session. Follow `.cursor/rules/VibeMode.mdc` and `.cur
 - This grants broader edit permission and multi‑file scaffolding while keeping confirmations for destructive actions.
 
 ### Quick start
-1. Sign in to Cursor Business and open this folder in Cursor.
+1. Sign in to Cursor and open this folder:
 2. Go to [01-basics/README.md](01-basics/README.md). This is the step‑by‑step guide.
 3. Outcome of `01-basics`: your `progress.md` plus a simple dashboard you build by prompting Cursor.
 4. Install a Markdown/HTML preview extension (details in [01-basics/README.md](01-basics/README.md)).
