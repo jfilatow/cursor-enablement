@@ -1,6 +1,9 @@
 ## Cursor enablement: start here
 
-This repo is a self‑paced, evolving Cursor training you can run any time or use in a hosted session.
+Purpose
+- Learn Cursor’s features by doing, not reading.
+- Follow a clear path from `01-basics` through advanced topics.
+- Use it for new‑hire onboarding or a one‑hour hosted session.
 
 ### Before you start — set up Cursor for vibe coding
 - Open Settings (gear icon bottom‑left).
@@ -25,15 +28,15 @@ Enable Vibe mode for this session. Follow `.cursor/rules/VibeMode.mdc` and `.cur
 
 ### Quick start
 1. Sign in to Cursor Business and open this folder in Cursor.
-2. Open [01-basics/README.md](01-basics/README.md) and follow the prompts.
-3. You’ll generate your own `progress.md` and later build a simple dashboard by prompting Cursor; no prewritten solutions are included.
-4. Install a preview extension to render Markdown/HTML in the IDE; see the recommendations in [01-basics/README.md](01-basics/README.md).
+2. Go to [01-basics/README.md](01-basics/README.md). This is the step‑by‑step guide.
+3. Outcome of `01-basics`: your `progress.md` plus a simple dashboard you build by prompting Cursor.
+4. Install a Markdown/HTML preview extension (details in [01-basics/README.md](01-basics/README.md)).
 
 Tip: terminal access on macOS and Windows
 - macOS: Finder → Applications → Utilities → Terminal.
 - Windows: Start menu → type "Command Prompt" → open. For PowerShell, search "PowerShell".
 
-### Sections (grow over time)
+### Sections
 - [01-basics](01-basics/README.md) — install, UI tour, rules, docs context, and your first hands‑on build via prompts.
 - [02-prompting-basics](02-prompting-basics/README.md) — prompt patterns and context control.
 - [03-inline-edits](03-inline-edits/README.md) — transform and refactor safely.

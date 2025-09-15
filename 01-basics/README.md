@@ -16,6 +16,7 @@ Learn Cursor’s core flow with hands‑on prompts. You’ll generate all artifa
 
 ### What you’ll build
 - A standardized `progress.md` checklist created via a structured prompt.
+- A minimal dashboard to visualize your progress (you will plan and generate it via prompts here).
 
 ### Agenda (suggested)
 - 0–10 min: Setup, open repo, orientation.
@@ -171,12 +172,22 @@ printf "# Cursor Basics Progress\n\n- [ ] Example task" > progress.md
 echo # Cursor Basics Progress>progress.md & echo.>>progress.md & echo - [ ] Example task>>progress.md
 ```
 
-### Step 7 — Optional: start a simple viewer (no solution provided)
-Ask Cursor to propose a minimal, static way to visualize `progress.md` without heavy tooling and with a landscape print option. Save your plan for the later section.
+### Step 7 — Build your simple dashboard (hands‑on via prompts)
+You’ll generate a tiny viewer that reads your `progress.md` and shows completion. Keep it static and lightweight.
 
-Suggested planning follow‑ups:
+1) Plan (no code yet)
 ```text
-Propose the minimal files and their roles (no code). Include acceptance criteria and print-to-PDF requirements.
+Plan a minimal, static viewer for `progress.md` that works locally with no heavy tooling. Include the file list, each file’s purpose, and acceptance criteria. Add a landscape print requirement.
+```
+
+2) Generate scaffold
+```text
+Create the files you proposed and include short comments in code explaining intent. Keep dependencies to zero. Provide macOS and Windows instructions to open the viewer.
+```
+
+3) Verify and iterate
+```text
+Given my generated files, check that the viewer loads and parses GitHub-style checkboxes. If something is missing, propose small diffs only.
 ```
 
 ### Step 8 — Reflection
