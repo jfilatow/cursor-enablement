@@ -28,7 +28,7 @@ Learn Cursor’s core flow with hands‑on prompts. You’ll generate all artifa
 
 ### Step 1 — Open the repo and orient
 1. Open this folder in Cursor.
-2. Open the top‑level `README.md`. This file explains the training structure, section order, and how you’ll generate artifacts yourself.
+2. Open the top‑level [README.md](../README.md). This file explains the training structure, section order, and how you’ll generate artifacts yourself.
 3. Open Settings → General, Editor, Keyboard Shortcuts to see what’s available.
 4. Install the recommended extensions from above. Ask Cursor for the exact steps if needed:
 Optional: enable a faster build session (Vibe mode)
@@ -56,7 +56,7 @@ Summarize the purpose of this repository in 4 bullets. Then list the next action
 
 Try in chat with attachments:
 ```text
-Read the top‑level README.md and 01-basics/README.md. In one paragraph, explain what I will build today.
+Read the top‑level [README.md](../README.md) and this [Basics README](README.md). In one paragraph, explain what I will build today.
 ```
 
 Optional: ask for keyboard shortcut help
@@ -67,7 +67,7 @@ List the key shortcuts for chat, inline edits, and opening settings. Keep it to 
 ### Step 3 — Attach docs as context
 Goal: show Cursor how to use nearby material.
 
-1. Drag the top‑level `README.md` and this `README.md` into chat. Ask for a 3‑sentence summary.
+1. Drag the top‑level [README.md](../README.md) and this [Basics README](README.md) into chat. Ask for a 3‑sentence summary.
 2. Add docs for Cursor as external knowledge and cite them in your prompt:
    - Quickstart: `https://docs.cursor.com/get-started/introduction`
    - Concepts: `https://docs.cursor.com/get-started/concepts`
@@ -89,12 +89,12 @@ Tip: keep attachments small and specific.
 ### Step 4 — Use rules to shape outputs
 Rules live in `.cursor/rules/`.
 
-1. Open `.cursor/rules/Enablement.mdc` and skim it.
+1. Open [`.cursor/rules/Enablement.mdc`](../.cursor/rules/Enablement.mdc) and skim it.
 2. In chat, refer to rules explicitly:
 ```text
 Follow the Enablement and Writing rules when responding. Create a short checklist for my progress.md.
 ```
-3. Optional: open `.cursor/rules/Presentations.mdc` for printable output guidance.
+3. Optional: open [`.cursor/rules/Presentations.mdc`](../.cursor/rules/Presentations.mdc) for printable output guidance.
 
 ### Step 5 — Optional context via MCP (Atlassian demo)
 You can connect external tools using MCP.
@@ -105,8 +105,35 @@ You can connect external tools using MCP.
 
 This is a demo; you don’t need it to finish Basics.
 
+Alternative: add the server via workspace config
+- Create or update `.cursor/mcp.json` in this folder with:
+```json
+{
+  "Atlassian-MCP-Server": {
+    "url": "https://mcp.atlassian.com/v1/sse"
+  }
+}
+```
+
+Commands to create the file (optional):
+- macOS:
+```bash
+mkdir -p .cursor && printf '{\n  "Atlassian-MCP-Server": {\n    "url": "https://mcp.atlassian.com/v1/sse"\n  }\n}\n' > .cursor/mcp.json
+```
+- Windows (PowerShell):
+```powershell
+$cfg = @{ 'Atlassian-MCP-Server' = @{ url = 'https://mcp.atlassian.com/v1/sse' } } | ConvertTo-Json -Depth 3; New-Item -ItemType Directory -Force .cursor | Out-Null; $cfg | Set-Content -Path .cursor\mcp.json
+```
+
+Verify it works
+- Settings → MCP & Integrations: confirm “Atlassian-MCP-Server” appears. If prompted, authorize OAuth.
+- In chat:
+```text
+Using the Atlassian OAuth MCP, list my Jira projects and suggest a small task I could track in progress.md.
+```
+
 ### Step 6 — Create your training checklist
-Use this structured prompt to generate your `progress.md` from scratch:
+Use this structured prompt to generate your `progress.md` from scratch. For more prompts, see [prompts.md](prompts.md):
 ```text
 You are my enablement copilot. Follow `.cursor/rules/Enablement.mdc` and `.cursor/rules/Writing.mdc`.
 

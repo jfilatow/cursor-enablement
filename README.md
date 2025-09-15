@@ -11,7 +11,7 @@ This repo is a self‑paced, evolving Cursor training you can run any time or us
 - Goal: a simple, predictable setup that mirrors a typical VS Code layout.
 
 ### Optional — enable Vibe mode (build‑fast permissions)
-- Open `.cursor/rules/VibeMode.mdc` and skim.
+- Open [`.cursor/rules/VibeMode.mdc`](.cursor/rules/VibeMode.mdc) and skim.
 - In chat, start your session by saying:
 ```text
 Enable Vibe mode for this session. Follow `.cursor/rules/VibeMode.mdc` and `.cursor/rules/Writing.mdc`. Ask before any destructive change.
@@ -20,24 +20,24 @@ Enable Vibe mode for this session. Follow `.cursor/rules/VibeMode.mdc` and `.cur
 
 ### Quick start
 1. Sign in to Cursor Business and open this folder in Cursor.
-2. Open `01-basics/README.md` and follow the prompts.
+2. Open [01-basics/README.md](01-basics/README.md) and follow the prompts.
 3. You’ll generate your own `progress.md` and later build a simple dashboard by prompting Cursor; no prewritten solutions are included.
-4. Install a preview extension to render Markdown/HTML in the IDE; see the recommendations in `01-basics/README.md`.
+4. Install a preview extension to render Markdown/HTML in the IDE; see the recommendations in [01-basics/README.md](01-basics/README.md).
 
 Tip: terminal access on macOS and Windows
 - macOS: Finder → Applications → Utilities → Terminal.
 - Windows: Start menu → type "Command Prompt" → open. For PowerShell, search "PowerShell".
 
 ### Sections (grow over time)
-- `01-basics` — install, UI tour, rules, docs context, and your first hands‑on build via prompts.
-- `02-prompting-basics` — prompt patterns and context control.
-- `03-inline-edits` — transform and refactor safely.
-- `04-generate` — create files/functions with explanations.
-- `05-read-explain` — summarize and document code.
-- `06-docs-writing` — README and docs workflows for all roles.
-- `07-bugfix-flow` — reproduce, fix, validate.
-- `08-mcp-and-context` — connect external tools and data.
-- `09-advanced-tips` — speed, reliability, personalization.
+- [01-basics](01-basics/README.md) — install, UI tour, rules, docs context, and your first hands‑on build via prompts.
+- [02-prompting-basics](02-prompting-basics/README.md) — prompt patterns and context control.
+- [03-inline-edits](03-inline-edits/README.md) — transform and refactor safely.
+- [04-generate](04-generate/README.md) — create files/functions with explanations.
+- [05-read-explain](05-read-explain/README.md) — summarize and document code.
+- [06-docs-writing](06-docs-writing/README.md) — README and docs workflows for all roles.
+- [07-bugfix-flow](07-bugfix-flow/README.md) — reproduce, fix, validate.
+- [08-mcp-and-context](08-mcp-and-context/README.md) — connect external tools and data.
+- [09-advanced-tips](09-advanced-tips/README.md) — speed, reliability, personalization.
 
 Start with `01-basics`. Each section targets ~60 minutes and builds on the previous one.
 

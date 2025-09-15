@@ -10,6 +10,29 @@ Objectives
 Next: `../09-advanced-tips/README.md`.
 
 
+### Atlassian MCP quick setup
+
+Add via Settings (recommended)
+- Settings → MCP & Integrations → Add remote server → Atlassian (OAuth) → Authorize.
+
+Add via JSON (alternative)
+Create or update `.cursor/mcp.json`:
+```json
+{
+  "Atlassian-MCP-Server": {
+    "url": "https://mcp.atlassian.com/v1/sse"
+  }
+}
+```
+
+Test queries
+```text
+Using the Atlassian MCP, list my Jira projects with names and keys.
+```
+```text
+Search for issues assigned to me this week and summarize them in 5 bullets.
+```
+
 ### Terminal quick reference (macOS and Windows)
 
 - macOS: Applications → Utilities → Terminal. Open URLs with `open <url>`.

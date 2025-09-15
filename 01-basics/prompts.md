@@ -4,7 +4,7 @@ Use these in Cursor chat. Edit names and goals as needed.
 
 ### Orientation
 ```text
-Read the top‑level `README.md` and `01-basics/README.md`. In 4 bullets, describe what I will do today and the final artifact.
+Read the top‑level [README.md](../README.md) and [01-basics/README.md](README.md). In 4 bullets, describe what I will do today and the final artifact.
 ```
 
 ### UI tour
@@ -19,7 +19,7 @@ I attached two files. Summarize them, then propose my next action in one sentenc
 
 ### Rules
 ```text
-Follow `.cursor/rules/Enablement.mdc` and `.cursor/rules/Writing.mdc`. Generate a concise checklist for my `progress.md`.
+Follow [`.cursor/rules/Enablement.mdc`](../.cursor/rules/Enablement.mdc) and [`.cursor/rules/Writing.mdc`](../.cursor/rules/Writing.mdc). Generate a concise checklist for my `progress.md`.
 ```
 
 ### Create progress.md (standardized)
@@ -43,6 +43,17 @@ Ensure any HTML you generate includes a "Print / Save PDF" option and landscape 
 ### MCP (Atlassian demo)
 ```text
 Using the Atlassian OAuth MCP, list my Jira projects and suggest a small task I could track in `progress.md`.
+```
+
+### Add Atlassian MCP via JSON
+```text
+Create or update `.cursor/mcp.json` with this content exactly and confirm it loads in Settings → MCP & Integrations:
+{
+  "Atlassian-MCP-Server": {
+    "url": "https://mcp.atlassian.com/v1/sse"
+  }
+}
+Then run a test query to verify connectivity.
 ```
 
 ### Docs resources to attach
